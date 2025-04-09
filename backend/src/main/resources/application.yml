@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: dev  # Set active profile to 'dev'
+  security:
+    enabled: false
+  datasource:
+    url: jdbc:postgresql://localhost:5432/communify
+    username: postgres
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update # use `validate` or `none` in production
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  jackson:
+    serialization:
+      indent_output: true
+server:
+  port: 8080
